@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MHA - DokuWiki</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,28 +13,33 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <header class="navbar">
+<body class="page-home">
+    <header class="navbar navbar-main">
+        <div class="nav-inner">
 
-        <div class="left-wrap">
-            <img class="logo-img" src="images/logo.png" alt="logo">
-            <h1 class="site-title">DokuWiki</h1>
+            <div class="left-wrap">
+                <img class="logo-img" src="images/logo.png" alt="logo">
+                <h1 class="site-title">DokuWiki</h1>
+            </div>
 
-            <nav class="left-section">
-                <a href="index.html">Home ↓</a>
-                <a href="episodes.html">Episodes ↓</a>
-                <a href="characters.html">Characters ↓</a>
-                <a href="storyarcs.html">Story Arcs↓</a>
-                <a href="about.html">About ↓</a>
+            <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="episodes.html">Episodes</a>
+                <a href="characters.html">Characters</a>
+                <a href="storyarcs.html">Story Arcs</a>
+                <a href="about.html">About</a>
+
+                <div class="nav-right">
+                    <input class="search" type="text" placeholder="Search">
+                    <span class="signin">Sign In</span>
+                </div>
             </nav>
-        </div>
 
-        <div class="right-section">
-            <input class="search" type="text" placeholder="Search">
-            <span class="signin">Sign In</span>
         </div>
-
     </header>
+
+
     <main>
         <div class="grid">
 
@@ -117,6 +123,17 @@
     <footer class="footer">
         DokuWiki
     </footer>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.nav-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+
+
 
 </body>
 

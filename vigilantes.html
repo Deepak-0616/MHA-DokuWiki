@@ -2,57 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MHA - Vigilantes</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MHA - Vigilantes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
-    <header class="navbar">
+<body class="page-vigilantes">
+  <header class="navbar navbar-main">
+    <div class="nav-inner">
 
-        <div class="left-wrap">
-            <img class="logo-img" src="images/logo.png" alt="logo">
-            <h1 class="site-title">DokuWiki</h1>
+      <div class="left-wrap">
+        <img class="logo-img" src="images/logo.png" alt="logo">
+        <h1 class="site-title">DokuWiki</h1>
+      </div>
 
-            <nav class="left-section">
-                <a href="index.html">Home ↓</a>
-                <a href="episodes.html">Episodes ↓</a>
-                <a href="characters.html">Characters ↓</a>
-                <a href="storyarcs.html">Story Arcs↓</a>
-                <a href="about.html">About ↓</a>
-            </nav>
+      <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <a href="characters.html">Characters</a>
+        <a href="storyarcs.html">Story Arcs</a>
+        <a href="about.html">About</a>
+
+        <div class="nav-right">
+          <input class="search" type="text" placeholder="Search">
+          <span class="signin">Sign In</span>
         </div>
+      </nav>
 
-        <div class="right-section">
-            <input class="search" type="text" placeholder="Search">
-            <span class="signin">Sign In</span>
-        </div>
+    </div>
+  </header>
+  <main>
 
-    </header>
-    <main>
-        <h1 id="ahead1">My Hero Academia: Vigilantes</h1>
-        <p id="para2">My Hero Academia: Vigilantes (ヴィジランテ -僕ぼくのヒーローアカデミア ILLEGALSイリーガルズ- Vijirante -Boku no Hīrō
-            Akademia Irīgaruzu-?, Vigilante -My Hero Academia ILLEGALS-) is a spin-off manga written by Hideyuki
-            Furuhashi and illustrated by Betten Court, and was published in Shonen Jump GIGA before moving to the Shonen
-            Jump+ app.</p>
-        <h2 id="ahead2">Summary</h2>
-        <p id="para2">The manga is about Koichi Haimawari, a young man who despite not being a licensed hero, uses his
-            Quirk to help others. After he and a street performer, Pop☆Step, are harassed by a group of thugs, they are
-            saved by the vigilante, Knuckleduster, who recruits them to become vigilantes themselves.</p>
-        <h2 id="ahead2">Style</h2>
-        <p id="para2">The manga has a slightly darker tone compared to the original manga. The manga was also designed
-            as a prequel to the main series, with some of the events occurring within the vigilantes' line of duties
-            having ties to the main series.</p>
-    </main>
-    <footer class="footer">
-        DokuWiki
-    </footer>
+    <h1 class="page-title">My Hero Academia: Vigilantes</h1>
+    <p class="page-intro">
+      <strong>My Hero Academia: Vigilantes</strong> is an official spin-off manga
+      set several years before the events of the main series. It explores a side
+      of hero society that operates outside the law.
+    </p>
+
+    <section class="info-box">
+      <div><strong>Writer:</strong> Hideyuki Furuhashi</div>
+      <div><strong>Illustrator:</strong> Betten Court</div>
+      <div><strong>Publisher:</strong> Shueisha</div>
+      <div><strong>Published:</strong> 2016 – 2022</div>
+      <div><strong>Volumes:</strong> 15</div>
+      <div><strong>Status:</strong> Completed</div>
+    </section>
+
+    <section class="content-section">
+      <h2>Overview</h2>
+      <p>
+        Unlike licensed Pro Heroes, vigilantes operate without official approval,
+        using their Quirks to help others in small but meaningful ways. The story
+        focuses on individuals who protect society from the shadows.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Plot</h2>
+      <p>
+        The story follows Koichi Haimawari, an ordinary man with a modest Quirk,
+        who becomes involved with underground heroes after meeting the brutal
+        vigilante Knuckleduster. Together with Pop☆Step, they confront crime
+        ignored by official hero agencies.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Connection to the Main Series</h2>
+      <p>
+        Vigilantes expands the My Hero Academia universe by exploring events,
+        characters, and themes that directly influence the main timeline,
+        including early appearances of familiar Pro Heroes.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Related Pages</h2>
+      <ul class="link-list">
+        <li><a href="manga.html">Main Manga</a></li>
+        <li><a href="characters.html">Characters</a></li>
+        <li><a href="storyarcs.html">Story Arcs</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    DokuWiki
+  </footer>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>

@@ -2,55 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MHA - Anime</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MHA - Anime</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
-    <header class="navbar">
+<body class="page-anime">
+  <header class="navbar navbar-main">
+    <div class="nav-inner">
 
-        <div class="left-wrap">
-            <img class="logo-img" src="images/logo.png" alt="logo">
-            <h1 class="site-title">DokuWiki</h1>
+      <div class="left-wrap">
+        <img class="logo-img" src="images/logo.png" alt="logo">
+        <h1 class="site-title">DokuWiki</h1>
+      </div>
 
-            <nav class="left-section">
-                <a href="index.html">Home ↓</a>
-                <a href="episodes.html">Episodes ↓</a>
-                <a href="characters.html">Characters ↓</a>
-                <a href="storyarcs.html">Story Arcs↓</a>
-                <a href="about.html">About ↓</a>
-            </nav>
+      <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <a href="characters.html">Characters</a>
+        <a href="storyarcs.html">Story Arcs</a>
+        <a href="about.html">About</a>
+
+        <div class="nav-right">
+          <input class="search" type="text" placeholder="Search">
+          <span class="signin">Sign In</span>
         </div>
+      </nav>
 
-        <div class="right-section">
-            <input class="search" type="text" placeholder="Search">
-            <span class="signin">Sign In</span>
-        </div>
+    </div>
+  </header>
+  <main>
 
-    </header>
-    <main>
-        <h1 id="ahead1">My Hero Academia (Anime)</h1>
-        <p id="para2">My Hero Academia (僕ぼくのヒーローアカデミア Boku no Hīrō Akademia?) is an anime series produced by Toho and
-            Bones based on the manga by Kohei Horikoshi. It was announced in Issue 49, 2015 of Weekly Shonen Jump. On
-            March 8, 2016, Funimation announced it had acquired exclusive international rights to the series. MBS
-            co-produced the first season.</p>
-        <h2 id="ahead2">Synopsis</h2>
-        <p id="para2">Izuku Midoriya is a boy who wishes to become a hero just like his idol, All Might, however lacking
-            a Quirk makes the dream feel impossible, and makes him an easy target for bullying, like from his childhood
-            friend, Katsuki Bakugo. However, after an incident where Izuku meets All Might, he proves himself worthy of
-            becoming a hero, and is chosen as All Might's successor to inherit his Quirk, One For All, which allows him
-            to get accepted to U.A. High School, and learn how to become a true hero.</p>
-    </main>
-    <footer class="footer">
-        DokuWiki
-    </footer>
+    <h1 class="page-title">My Hero Academia (Anime)</h1>
+
+    <p class="page-intro">
+      <strong>My Hero Academia</strong> is an anime adaptation of the manga written
+      and illustrated by Kōhei Horikoshi. Produced by Studio Bones, the series
+      follows the journey of Izuku Midoriya in a world where superpowers—known
+      as Quirks—are the norm.
+    </p>
+
+    <section class="info-box">
+      <div><strong>Studio:</strong> Bones</div>
+      <div><strong>First aired:</strong> April 3, 2016</div>
+      <div><strong>Episodes:</strong> 150+</div>
+      <div><strong>Status:</strong> Ongoing</div>
+    </section>
+
+    <section class="content-section">
+      <h2>Synopsis</h2>
+      <p>
+        Izuku Midoriya dreams of becoming a hero like his idol All Might, despite
+        being born without a Quirk. After a fateful encounter, Izuku inherits
+        the legendary power <em>One For All</em> and enrolls in U.A. High School,
+        where he trains to become a true hero alongside other aspiring students.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Explore the Anime</h2>
+      <ul class="link-list">
+        <li><a href="episodes.html">Episode Guide</a></li>
+        <li><a href="storyarcs.html">Story Arcs</a></li>
+        <li><a href="movies.html">Movies</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    DokuWiki
+  </footer>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>

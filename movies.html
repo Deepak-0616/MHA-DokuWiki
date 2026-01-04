@@ -2,58 +2,95 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MHA - Movies</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MHA - Movies</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
-    <header class="navbar">
+<body class="page-movies">
+  <header class="navbar navbar-main">
+    <div class="nav-inner">
 
-        <div class="left-wrap">
-            <img class="logo-img" src="images/logo.png" alt="logo">
-            <h1 class="site-title">DokuWiki</h1>
+      <div class="left-wrap">
+        <img class="logo-img" src="images/logo.png" alt="logo">
+        <h1 class="site-title">DokuWiki</h1>
+      </div>
 
-            <nav class="left-section">
-                <a href="index.html">Home ↓</a>
-                <a href="episodes.html">Episodes ↓</a>
-                <a href="characters.html">Characters ↓</a>
-                <a href="storyarcs.html">Story Arcs↓</a>
-                <a href="about.html">About ↓</a>
-            </nav>
+      <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <a href="characters.html">Characters</a>
+        <a href="storyarcs.html">Story Arcs</a>
+        <a href="about.html">About</a>
+
+        <div class="nav-right">
+          <input class="search" type="text" placeholder="Search">
+          <span class="signin">Sign In</span>
         </div>
+      </nav>
 
-        <div class="right-section">
-            <input class="search" type="text" placeholder="Search">
-            <span class="signin">Sign In</span>
-        </div>
+    </div>
+  </header>
+  <main>
 
-    </header>
-    <main>
-        <h1 id="ahead1">My Hero Academia: You're Next</h1>
-        <p id="para2">My Hero Academia: You're Next (僕のヒーローアカデミア THE MOVIE ユア ネクスト Boku no Hīrō Akademia Za Mūbī Yuā
-            Nekusuto?) is a 2024 animated film and the fourth movie in the My Hero Academia series.
+    <h1 class="page-title">My Hero Academia Movies</h1>
 
-            The movie was officially revealed in Weekly Shonen Jump Issue 36-37, 2023 on August 7th, 2023. Its title was
-            announced on January 29th, 2024, and premiered on August 2nd, 2024 in Japan.[3][4] It was released in North
-            America on October 11th, 2024.</p>
-        <h2 id="ahead2">Synopsis</h2>
-        <p id="para2">“Next, it’s your turn!”
+    <p class="page-intro">
+      My Hero Academia has expanded beyond the main TV series into theatrical films that explore original stories and
+      larger-scale battles with beloved characters. :contentReference[oaicite:2]{index=2}
+    </p>
 
-            In a society where heroes and villains continuously battle in the name of peace and chaos, Deku, a U.A. High
-            School student who aspires to be the best hero he can be, confronts the villain who imitates the hero he’s
-            long admired. Can Deku and the rest of U.A. High Class 1-A protect the world by putting an end to Dark
-            Might, the man claiming to be the new Symbol of Peace?</p>
-    </main>
-    <footer class="footer">
-        DokuWiki
-    </footer>
+    <section class="movie-card">
+      <h2>My Hero Academia: Two Heroes (2018)</h2>
+      <p>
+        The first theatrical film in the franchise features Izuku Midoriya and All Might on I-Island, where a terror
+        plot tests both heroes’ resolve. :contentReference[oaicite:3]{index=3}
+      </p>
+    </section>
+
+    <section class="movie-card">
+      <h2>My Hero Academia: Heroes Rising (2019)</h2>
+      <p>
+        Class 1-A is stationed on Nabu Island when a powerful villain threatens the community, forcing all heroes to
+        defend the island. :contentReference[oaicite:4]{index=4}
+      </p>
+    </section>
+
+    <section class="movie-card">
+      <h2>My Hero Academia: World Heroes’ Mission (2021)</h2>
+      <p>
+        A global crisis reignites when a sinister organization releases a dangerous biological threat; heroes travel the
+        world to stop it. :contentReference[oaicite:5]{index=5}
+      </p>
+    </section>
+
+    <section class="movie-card">
+      <h2>My Hero Academia: You’re Next (2024)</h2>
+      <p>
+        Set during the events of Season 7, Class 1-A confronts a new threat in the form of Dark Might, a twisted figure
+        imitating the Symbol of Peace. :contentReference[oaicite:6]{index=6}
+      </p>
+    </section>
+
+  </main>
+  <footer class="footer">
+    DokuWiki
+  </footer>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>

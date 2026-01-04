@@ -13,74 +13,105 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <header class="navbar">
+<body class="page-about">
+    <header class="navbar navbar-main">
+        <div class="nav-inner">
 
-        <div class="left-wrap">
-            <img class="logo-img" src="images/logo.png" alt="logo">
-            <h1 class="site-title">DokuWiki</h1>
+            <div class="left-wrap">
+                <img class="logo-img" src="images/logo.png" alt="logo">
+                <h1 class="site-title">DokuWiki</h1>
+            </div>
 
-            <nav class="left-section">
-                <a href="index.html">Home ↓</a>
-                <a href="episodes.html">Episodes ↓</a>
-                <a href="characters.html">Characters ↓</a>
-                <a href="storyarcs.html">Story Arcs↓</a>
-                <a href="about.html">About ↓</a>
+            <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="episodes.html">Episodes</a>
+                <a href="characters.html">Characters</a>
+                <a href="storyarcs.html">Story Arcs</a>
+                <a href="about.html">About</a>
+
+                <div class="nav-right">
+                    <input class="search" type="text" placeholder="Search">
+                    <span class="signin">Sign In</span>
+                </div>
             </nav>
-        </div>
 
-        <div class="right-section">
-            <input class="search" type="text" placeholder="Search">
-            <span class="signin">Sign In</span>
         </div>
-
     </header>
     <main>
-        <div class="about-container">
-
-            <h1 id="ahead2">About DokuWiki – My Hero Academia Fan Site</h1>
-
-            <p id="para2">
-                DokuWiki is a fan-made project inspired by the heroic world of
-                <strong>My Hero Academia (Boku no Hero Academia)</strong>.
-                This site collects information about characters, story arcs, episodes,
-                and more from across the series.
+        <section class="about-hero">
+            <h1 class="about-title">About DokuWiki</h1>
+            <p class="about-sub">
+                A fan-built archive inspired by the world of
+                <span class="highlight">My Hero Academia</span>
             </p>
+        </section>
 
-            <p id="para2">
-                The goal of this project is to provide a simple, clean, and
-                easy-to-navigate hub for fans who want to explore the story from
-                the beginning of U.A. High School to the final battles between
-                heroes and villains.
+        <section class="about-block">
+            <h2 class="about-head">What is DokuWiki?</h2>
+            <p>
+                DokuWiki is a fan-made project created to document the characters,
+                story arcs, episodes, and evolution of the My Hero Academia universe.
+                It is built as a clean, fast, wiki-style reference — nothing more,
+                nothing less.
             </p>
+        </section>
 
-            <h2 id="ahead2">What you’ll find here</h2>
+        <section class="about-grid">
+            <div class="about-card">
+                <h3>Characters</h3>
+                <p>Heroes, villains, students, pros, and legends — organized and searchable.</p>
+            </div>
 
-            <ul class="about-list">
-                <li>Character profiles and groups</li>
-                <li>Episode lists separated by seasons</li>
-                <li>Major story arcs and sagas</li>
-                <li>A simple wiki-style layout rebuilt using HTML & CSS only</li>
-            </ul>
+            <div class="about-card">
+                <h3>Episodes</h3>
+                <p>Season-wise episode lists designed for quick browsing and clarity.</p>
+            </div>
 
-            <p id="para2">
-                This site is not official and is not affiliated with
-                <strong>Kōhei Horikoshi</strong>, <strong>Shueisha</strong>, or
-                any licensed distributor of My Hero Academia.
-                It is created solely for educational and fan purposes.
+            <div class="about-card">
+                <h3>Story Arcs</h3>
+                <p>A structured timeline of sagas and arcs that shape the entire story.</p>
+            </div>
+
+            <div class="about-card">
+                <h3>Pure HTML & CSS</h3>
+                <p>No frameworks. No JavaScript bloat. Just clean, readable markup.</p>
+            </div>
+        </section>
+
+        <section class="about-block">
+            <h2 class="about-head">Why this exists</h2>
+            <p>
+                This project exists to learn, to experiment, and to build something
+                meaningful from scratch. It is intentionally simple — because
+                information should be easy to read, not hard to reach.
             </p>
+        </section>
 
-            <p id="para2">
-                All artworks and trademarks belong to their respective owners.
-                Please support the official release!
+        <section class="about-warning">
+            <h3>Important Notice</h3>
+            <p>
+                DokuWiki is <strong>not official</strong> and is not affiliated with
+                Kōhei Horikoshi, Shueisha, Bones, or any licensed distributor.
             </p>
-
-        </div>
-
+            <p>
+                All characters, names, and trademarks belong to their respective owners.
+                Please support the official release.
+            </p>
+        </section>
     </main>
+
     <footer class="footer">
         DokuWiki
     </footer>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.nav-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
